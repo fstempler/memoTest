@@ -1,5 +1,5 @@
 import MemoBlock from '../MemoBlock/MemoBlock';
-import './Board.css';
+import './board.css';
 
 const Board = ({animating, handleMemoClick, memoBlocks}) => {
     return (
