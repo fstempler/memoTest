@@ -13,6 +13,7 @@ function App() {
   const [shuffledMemoBlocks, setShuffledMemoBlocks] = useState([]); //Almacena los bloques en la memoria
   const [selectedMemoBlock, setSelectedMemoBlock] = useState(null); //Almacena los bloques que selecciona el usuario
   const [animating, setAnimating] = useState(false); //Almacena los bloques seleccionados en el tablero
+  const [level, setLevel] = useState(0); //Maneja el nombre de cada nivel
 
   useEffect( () => {
   
@@ -58,7 +59,9 @@ function App() {
     const newEmojiCount = shuffledMemoBlocks.length + additionalEmojiCount;
     fetchEmojis(newEmojiCount).then((emojis) => {
       setShuffledMemoBlocks(emojis);
+      setLevel(level + 1);
     });
+    
   };
  
   return (
@@ -66,7 +69,8 @@ function App() {
     <Board memoBlocks={shuffledMemoBlocks} 
     animating={animating} 
     handleMemoClick={handleMemoClick} 
-    onGameCompletion={handleGameCompletion} />
+    onGameCompletion={handleGameCompletion}
+    level={level} />
     </>
   );
 }

@@ -5,3 +5,11 @@
     max-width: 600px;
     margin: 100px auto;
 }
+
+.level{
+    color: aquamarine;
+    font-family: 'Handjet', cursive;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+}
