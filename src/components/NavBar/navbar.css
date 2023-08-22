@@ -1,0 +1,12 @@
+.titulo{
+    font-family: 'Handjet', cursive;
+    color: bisque;
+    font-size: 5rem;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
